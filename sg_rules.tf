@@ -22,7 +22,6 @@ resource "aws_security_group" "sg_web" {
     from_port   = 22
     to_port     = 22
     protocol    = "TCP"
-    #cidr_blocks = ["0.0.0.0/0"]
     cidr_blocks = ["8.8.8.8/32"]
   }
 
