@@ -5,7 +5,7 @@ on:
           - asdasd #master
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'tf-deploy'
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
