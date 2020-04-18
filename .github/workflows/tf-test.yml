@@ -8,6 +8,8 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
+      - name: setup
+        run: pip install checkov
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Terraform Format'
