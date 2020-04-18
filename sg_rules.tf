@@ -6,6 +6,7 @@ provider "aws" {
 
 resource "aws_security_group" "sg_web" {
   name        = "sg_web"
+  id          = "sg-05e8d866ca2a16969"
   description = "SG for web servers"
   vpc_id      = "vpc-05fb0e7964de7d239"
 
