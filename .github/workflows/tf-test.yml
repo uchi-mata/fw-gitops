@@ -1,4 +1,4 @@
-name: 'Terraform GitHub Actions - verify TF'
+name: 'tf-test'
 on:
   pull_request:
       branches:
