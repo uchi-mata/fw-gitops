@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-2"
+}
+
 ########################################## Security Groups
 
 resource "aws_security_group" "sg_web" {
