@@ -1,22 +1,9 @@
-########################################## Region
-
-provider "aws" {
-  region = "us-east-2"
-}
-
-########################################## VPC
-
-resource "aws_vpc" "demovpc" {
-  cidr_block = "10.0.0.0/16"
-  id = "vpc-05fb0e7964de7d239"
-}
-
 ########################################## Security Groups
 
 resource "aws_security_group" "sg_web" {
   name        = "sg_web"
   description = "SG for web servers"
-  vpc_id      = aws_vpc.demovpc.id
+  vpc_id      = "vpc-05fb0e7964de7d239"
 
   # SSH access
   ingress {
