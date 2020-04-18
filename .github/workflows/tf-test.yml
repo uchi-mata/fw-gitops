@@ -1,8 +1,7 @@
 name: 'tf-test'
 on:
-  push:  #  pull_request:
-      branches:
-        - master
+  pull_request:
+
 jobs:
   terraform:
     name: 'Terraform'
