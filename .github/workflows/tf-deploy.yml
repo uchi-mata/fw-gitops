@@ -2,7 +2,7 @@ name: 'tf-apply'
 on:
   push:
       branches:
-          - master
+          - asdasd #master
 jobs:
   terraform:
     name: 'Terraform'
