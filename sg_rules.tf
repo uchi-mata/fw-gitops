@@ -17,7 +17,6 @@ resource "aws_vpc" "demovpc" {
 
 resource "aws_security_group" "sg_web" {
   name        = "sg_web"
-  id          = "sg-05e8d866ca2a16969"
   description = "SG for web servers"
   vpc_id      = aws_vpc.demovpc.id
 
