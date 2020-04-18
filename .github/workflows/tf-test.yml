@@ -4,7 +4,7 @@ on:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'tf-test'
     runs-on: ubuntu-latest
     steps:
       - name: setup
