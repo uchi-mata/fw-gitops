@@ -8,6 +8,7 @@ provider "aws" {
 
 resource "aws_vpc" "demovpc" {
   cidr_block = "10.0.0.0/16"
+  id = "vpc-05fb0e7964de7d239"
 }
 
 ########################################## Security Groups
